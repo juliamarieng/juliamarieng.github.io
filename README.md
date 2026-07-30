@@ -1,4 +1,4 @@
-# 💻 Portfólio Pessoal | Julia
+# 💻 Portfólio Pessoal | Julia Maria
 
 Bem-vindo(a) ao repositório do meu portfólio pessoal! Este projeto foi desenvolvido para apresentar minha trajetória acadêmica, competências técnicas e os principais projetos que venho desenvolvendo ao longo da minha jornada na tecnologia.
 
