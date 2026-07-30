@@ -1,0 +1,315 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+html{
+    scroll-behavior: smooth;
+
+}
+
+:root{
+    --primaria: #8d69d0;
+    --segundaria:#8711d6;
+    --escuro: #271b48;
+    --maisEscuro: #3a0a4e;
+    --claro: #e2e8f0;
+    --vidro: #rgba(255, 255, 255, 0.1);
+}
+
+body{
+    background-color: var(--maisEscuro);
+    color: var(--claro);
+
+}
+
+.navegacao{
+    position: fixed;
+    top: 0;
+    background: rgba(60, 29, 75, 0.7);
+    width: 100%;
+    z-index: 70;
+    padding: 1.5rem;
+}
+
+.menu{
+    display: flex;
+    justify-self: center;
+    list-style: none;
+    gap: 5rem;
+}
+
+.menu-link{
+    text-decoration: none;
+    color: var(--claro);
+    font-weight: 900;
+    position: relative;
+    padding: 0.5rem 0;
+}
+
+.menu-link::after{
+    content: '';
+    height: 2px;
+    width: 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(90deg, var(--primaria), var(--segundaria));
+    transition: width 0.5s ease;
+}
+
+.menu-link:hover::after{
+    width: 100%;
+}
+
+.cabecalho{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.foto-perfil{
+    width: 250px;
+    height: 230px;
+    box-shadow: 0 0 20px rgba(92, 51, 158, 0.3);
+    border-radius: 50%;
+    border: 4px solid var(--vidro);
+    animation: flutuar 5s ease-in-out infinite;
+
+}
+
+h1{
+    font-size: 3.5rem;
+    color: var(--primaria);
+    font-weight: bold;
+    margin: 20px;
+}
+
+.cabecalho-sub-titulo{
+    font-size: 1.5rem;
+    color: var(--claro);
+}
+
+.sobre{
+    padding: 6rem 2rem;
+
+}
+
+.sobre-titulo{
+    font-size: 3rem;
+    color: var(--claro);
+    text-align: center;
+}
+
+.sobre-caixa{
+    padding: 2rem;
+    max-width: 1020px;
+    margin: 0 auto;
+    border-radius: 16px;
+    border: 1px solid var(--vidro);
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.sobre-paragrafo{
+    text-align: justify;
+    font-size: 1.3rem;    
+}
+
+.projetos{
+    padding: 6rem 2rem;
+}
+
+.projetos-imagem{
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.projetos-titulo{
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+}
+
+
+
+.projetos-caixa{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.projetos-card{
+    background:  rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
+    backdrop-filter: blur(5px);
+    border: 1px solid var(--vidro);
+    overflow: hidden;
+    transition: all 0.5s ease;
+    cursor: pointer;
+}
+
+.projetos-card:hover{
+    box-shadow: 0 10px 20px rgb(79, 70, 229, 0.3);
+    transform: translateY(-10px) scale(1.03);
+}
+
+.caixa-textos-projeto{
+    padding: 1.5rem;
+}
+
+.paragrafo-projetos{
+    color: var(--claro);
+    line-height: 1.25rem;
+}
+
+.info-projetos{
+    margin-bottom: 5px;
+}
+
+.contatos{
+    padding: 6rem 2rem;
+
+}
+
+.contatos-titulo{
+     text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+}
+
+.formulario-contato{
+    max-width: 600px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(5px);
+    padding: 2rem;
+    border: 1px solid var(--vidro);
+    border-radius: 16px;
+    box-shadow: 0 0 5px rgb(79, 70, 229, 0.3);
+
+    
+}
+
+
+
+.campo-form{
+    width: 100%;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    color: var(--claro);
+    outline: none;
+}
+
+.campo-form:focus{
+    border-color: var(--segundaria);
+    box-shadow: 0 0 10px rgba(79, 70, 229, 0.3);
+}
+
+.grupo-form{
+    margin-bottom: 1.5rem;
+}
+
+.botao-form{
+    color: var(--claro);
+    background: linear-gradient(45deg, var(--primaria), var(--segundaria));
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    width: 100%;
+    transition: all 0.5 ;
+}
+
+.botao-form:hover{
+    transform: translateY(-4px);
+    box-shadow: 0 5px 15px rgba(79, 70, 229, 0.3);
+}
+
+.particula{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.5;
+    background: 
+    radial-gradient(circle at 10% 20%, var(--primaria) 0%, transparent 20%), 
+    radial-gradient(circle at 90% 80%, var(--segundaria) 0%, transparent 20%),
+    var(--maisEscuro);
+}
+
+
+
+@keyframes flutuar {
+    0%, 100%{
+        transform: translateY(0);
+    }
+
+    50%{
+        transform: translateY(-20px);
+    }
+}
+
+
+/* Container principal - define a área visível */
+.tech-slider-only-icons {
+  width: 100%;
+  overflow: hidden;
+  /* background-color: transparent; */ /* Opcional: garanta que o fundo seja transparente */
+  padding: 40px 0; /* Espaço vertical para os ícones respirarem */
+  position: relative;
+  
+  /* Mantive a máscara suave nas pontas para um efeito mais elegante */
+  mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+}
+
+/* Fila móvel que contém os ícones */
+.tech-track-only-icons {
+  display: flex;
+  width: max-content; /* Importante para o cálculo da animação */
+  gap: 60px; /* Aumentei o espaçamento entre os ícones já que não há cards */
+  align-items: center; /* Alinha os ícones verticalmente ao centro */
+  animation: scrollOnlyIcons 50s linear infinite; /* Animação contínua */
+}
+
+/* Pausa a roleta ao passar o mouse */
+.tech-slider-only-icons:hover .tech-track-only-icons {
+  animation-play-state: paused;
+}
+
+/* Item individual que segura o ícone */
+.icon-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* Sem background, sem border, sem padding de card */
+}
+
+/* Estilização direta do ícone Devicon */
+.icon-item i {
+  font-size: 3rem; /* Tamanho grande dos ícones */
+  /* Opcional: Adicionar uma sombra leve para dar profundidade se o fundo do site for escuro */
+  /* filter: drop-shadow(0px 4px 4px rgba(0,0,0,0.5)); */
+}
+
+/* Animação que move a fila até a metade (50%) */
+@keyframes scrollOnlyIcons {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%); /* Move exatamente o tamanho da primeira lista */
+  }
+}
